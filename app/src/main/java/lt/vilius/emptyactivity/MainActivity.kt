@@ -36,5 +36,8 @@ class MainActivity : AppCompatActivity() {
 
             myTextView.setText("Antra_Zinute")
         }
+        openButton.setOnClickListener {
+            Log.i(TAG, "onCreate: just clicked OPEN button")
+        }
     }
 }
