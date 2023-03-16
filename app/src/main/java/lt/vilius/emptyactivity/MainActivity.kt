@@ -1,6 +1,7 @@
 package lt.vilius.emptyactivity
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -37,7 +38,9 @@ class MainActivity : AppCompatActivity() {
             myTextView.setText("Antra_Zinute")
         }
         openButton.setOnClickListener {
-            Log.i(TAG, "onCreate: just clicked OPEN button")
+            //Log.i(TAG, "onCreate: just clicked OPEN button")
+            val openIntent: Intent = Intent(this, SecondActivity::class.java)
+            startActivity(openIntent)
         }
     }
 }
