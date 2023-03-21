@@ -10,9 +10,11 @@ class SecondActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
-        val secondActivityButton : Button = findViewById(R.id.buttonOpenSecond)
-        val secondActivityTextView : TextView = findViewById(R.id.textViewSecond)
+        val secondActivityButton: Button = findViewById(R.id.buttonOpenSecond)
+        val secondActivityTextView: TextView = findViewById(R.id.textViewSecond)
         secondActivityButton.visibility = View.VISIBLE
+
+        secondActivityTextView.visibility = View.VISIBLE
 
 
     }
