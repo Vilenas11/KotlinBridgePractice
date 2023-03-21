@@ -19,14 +19,24 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="InvalidId" />
 
+    <EditText
+        android:id="@+id/myEditText"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintTop_toBottomOf="@+id/myTextView" />
+
+
     <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonOpen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="@+id/myTextView"
-        android:layout_marginTop="32dp"
         android:text="@string/main_activity_button_open"
+        app:layout_constraintBottom_toBottomOf="parent"
 
-        app:layout_constraintStart_toStartOf="@+id/myTextView"
-        app:layout_constraintTop_toBottomOf="@+id/myTextView"></com.google.android.material.button.MaterialButton>
+        app:layout_constraintEnd_toEndOf="@+id/myEditText"
+        app:layout_constraintStart_toStartOf="@+id/myEditText"
+        app:layout_constraintTop_toBottomOf="@+id/myEditText"></com.google.android.material.button.MaterialButton>
 </androidx.constraintlayout.widget.ConstraintLayout>
