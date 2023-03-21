@@ -16,6 +16,8 @@ class SecondActivity : AppCompatActivity() {
 
         secondActivityTextView.visibility = View.VISIBLE
 
-
+        secondActivityButton.setOnClickListener {
+            finish()
+        }
     }
 }
