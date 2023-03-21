@@ -16,6 +16,9 @@ class SecondActivity : AppCompatActivity() {
 
         secondActivityTextView.visibility = View.VISIBLE
 
+        val message = intent.getStringExtra("message_key")
+        secondActivityTextView.setText("zinute:\n $message")
+
         secondActivityButton.setOnClickListener {
             finish()
         }

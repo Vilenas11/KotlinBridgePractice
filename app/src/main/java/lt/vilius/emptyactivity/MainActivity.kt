@@ -16,7 +16,7 @@ import kotlinx.coroutines.launch
 class MainActivity : AppCompatActivity() {
     @SuppressLint("SetTextI18n")
 
-    final val TAG = "verygood_TAG"
+    final val TAG: String = "verygood_TAG"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -40,8 +40,11 @@ class MainActivity : AppCompatActivity() {
             myTextView.setText("Antra_Zinute")
         }
         openButton.setOnClickListener {
-            //Log.i(TAG, "onCreate: just clicked OPEN button")
+            val message: String = myEditView.text.toString()
+
+            Log.i(TAG, "onCreate: just clicked OPEN button")
             val openIntent: Intent = Intent(this, SecondActivity::class.java)
+            openIntent.putExtra("message_key", message)
             startActivity(openIntent)
         }
     }
